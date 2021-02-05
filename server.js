@@ -18,6 +18,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useUnifiedTopology: true,
 });
 
+var routes = require("./controller/fitness_controller.js");
+
 // routes
 // app.use(require("./routes/api.js"));
 app.use(require("./routes/view.js"));
