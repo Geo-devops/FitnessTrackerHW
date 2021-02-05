@@ -15,7 +15,26 @@ const workoutSchema = new Schema({
     }]
 });
 
-const exercisesSchema = new Schema
+const exercisesSchema = new Schema({
+    name: {
+        type: String, 
+        required: true
+    },
+    reps: {
+        type: Number,
+        required: true
+    }
+});
+
+const exercisesSchema = new Schema({
+    name: {
+        type: String, 
+        required: true
+    },
+    reps: {
+        
+    }
+})
 
 
 
