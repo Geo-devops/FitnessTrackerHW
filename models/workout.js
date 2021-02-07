@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const { all } = require('../routes_view');
-const Schema = mongoose=Schema;
+
+const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
     day: {
@@ -10,20 +10,32 @@ const workoutSchema = new Schema({
     excercises: [
         {
             type: {
-                type: String
+                type: String,
+                trim:true,
+                required:"exercise type"
             },
             name: {
-                type: String
+                type: String,
+                trim:true,
+                required:"exercise type"
             },
             duration: {
-                type: Number
+                type: Number,
+                trim:true,
+                required:"exercise type"
             },
             weight: {
                 type: Number
             },
             reps: {
                 type: Number
-            }
+            },
+            sets: {
+                type: Number
+            },
+            distance: {
+                type: Number
+            },
         }
     ]
 });
