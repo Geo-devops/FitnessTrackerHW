@@ -49,7 +49,7 @@ function populateChart(data) {
   const daysOfWeek = new Chart(line, {
     type: "line",
     data: {
-      const daysOfWeek = [
+      labe daysOfWeek: [
         'Sunday',
         'Monday',
         'Tuesday',
@@ -73,18 +73,26 @@ function populateChart(data) {
       title: {
         display: true
       },
+      scales:{
+        xAxes: [
+          {
+            display: true, 
+            scaleLabel: {
+              display: true
+            }
+          }
+        ],
+        yAxes: [
+          {
+            display: true,
+            scaleLabel: {
+              display: true
+            }
+          }
+        ]
+      }
     }
-  })
-
-  // const daysOfWeek = [
-  //   'Sunday',
-  //   'Monday',
-  //   'Tuesday',
-  //   'Wednesday',
-  //   'Thursday',
-  //   'Friday',
-  //   'Saturday',
-  // ];
+  });
 
   const labels = data.map(({ day }) => {
     const date = new Date(day);
