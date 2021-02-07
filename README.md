@@ -1,3 +1,5 @@
+# FITNESSTRACKER
+
 
 This app is intended to be able to log your workouts as you are completing your excersises. 
 
@@ -7,4 +9,9 @@ There are always the time when you are at the gym and you have need to record yo
 
 ## Technology used 
 
-MongoDB, GitHub and Hereku
+MongoDB, GitHub and Heroku are the technologies used in this applications.  You can insatll these by using node package manager.  
+
+
+## Questions
+Feel free to contact me about any questions.
+    

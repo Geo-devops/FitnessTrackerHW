@@ -80,4 +80,4 @@ router.post('/api/workouts/range', (req, res) => {
 		});
 });
 
-module.exports=router
+module.exports = router;
