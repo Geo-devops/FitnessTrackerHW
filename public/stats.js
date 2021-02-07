@@ -1,6 +1,13 @@
+const { response } = require("express");
+
 fetch("/api/workouts/range")
-  .then(response.json();
-)
+  .then(response => {
+    return response.json();
+  })
+
+  .then(data => {
+    populateChart (data);
+  });
 
 
 API.getWorkoutsInRange()
@@ -39,15 +46,45 @@ function populateChart(data) {
   let pie = document.querySelector('#canvas3').getContext('2d');
   let pie2 = document.querySelector('#canvas4').getContext('2d');
 
-  const daysOfWeek = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ];
+  const daysOfWeek = new Chart(line, {
+    type: "line",
+    data: {
+      const daysOfWeek = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+      ],
+      datasets: [
+        {
+          label: "Length of Workout",
+          data: durations,
+          fill: false
+        }
+      ]
+
+    },
+
+    options: {
+      responsive: true,
+      title: {
+        display: true
+      },
+    }
+  })
+
+  // const daysOfWeek = [
+  //   'Sunday',
+  //   'Monday',
+  //   'Tuesday',
+  //   'Wednesday',
+  //   'Thursday',
+  //   'Friday',
+  //   'Saturday',
+  // ];
 
   const labels = data.map(({ day }) => {
     const date = new Date(day);
